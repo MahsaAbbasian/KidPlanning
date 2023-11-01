@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">KidPlanning</string>
+    <string name="login_activity_textview_middle">Login Activity</string>
+    <string name="dashboard_activity_name">Dashboard</string>
+</resources>
