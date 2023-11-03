@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.hiq.kidplanning"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.hiq.kidplanning"
