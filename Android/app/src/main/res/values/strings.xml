@@ -2,4 +2,11 @@
     <string name="app_name">KidPlanning</string>
     <string name="login_activity_textview_middle">Login Activity</string>
     <string name="dashboard_activity_name">Dashboard</string>
+    <string name="task_clean_room">Cleaning</string>
+    <string name="task_shower">Shower</string>
+    <string name="task_homework">Homework</string>
+    <string name="task_playtime">Playtime</string>
+    <string name="task_generic">Default\nTask</string>
+    <string name="comment_generic">Default Comment</string>
+    <string name="points">Points: </string>
 </resources>
