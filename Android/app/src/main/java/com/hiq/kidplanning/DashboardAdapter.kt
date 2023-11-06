@@ -1,6 +1,7 @@
 package com.hiq.kidplanning
 
 import android.content.res.Resources
+import android.graphics.Paint
 import android.provider.Settings.Global.getString
 import android.view.LayoutInflater
 import android.view.View
@@ -26,10 +27,15 @@ class DashboardAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val dashboardDataModel = mList[position]
+
         if(dashboardDataModel.pictureID != 0){
             holder.task.text = dashboardDataModel.taskTodo
             holder.comment.text = dashboardDataModel.comment
             holder.points.text = dashboardDataModel.points.toString()
+        }
+        if(dashboardDataModel.isComplete){
+            holder.task.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
+            holder.comment.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
         }
         // TODO : Implement "task complete" logic
         //holder.points.text = Resources.getSystem().getString(R.string.points) // This is how to use values from strings.xml
@@ -53,6 +59,7 @@ class DashboardAdapter(
         val task: TextView = itemView.findViewById(R.id.recycler_cardview_id_1)
         val comment: TextView = itemView.findViewById(R.id.recycler_cardview_comment)
         val points: TextView = itemView.findViewById(R.id.recycler_cardview_points_value)
+
 
         init {
             itemView.setOnClickListener {
