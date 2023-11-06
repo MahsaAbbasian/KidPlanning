@@ -9,4 +9,5 @@
     <string name="task_generic">Default\nTask</string>
     <string name="comment_generic">Default Comment</string>
     <string name="points">Points: </string>
+    <string name="dashboard">Dashboard</string>
 </resources>

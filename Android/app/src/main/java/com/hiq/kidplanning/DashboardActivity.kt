@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class DashboardActivity : AppCompatActivity() {
 
-    private lateinit var dashboardRecyclerView: RecyclerView
+    private lateinit var dashboardList: RecyclerView
     private lateinit var dashboardAdapter: DashboardAdapter
     private lateinit var tasksList: ArrayList<DashboardDataModel>
 
@@ -16,17 +16,18 @@ class DashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
 
-        dashboardRecyclerView = findViewById(R.id.dashboard_recycler_view)
+        dashboardList = findViewById(R.id.dashboardRecyclerList)
         tasksList = ArrayList()
+        addTasks()
 
-        val layoutManager = LinearLayoutManager(this, RecyclerView.HORIZONTAL,false)
-        dashboardRecyclerView.layoutManager = layoutManager
+        val layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
+        dashboardList.layoutManager = layoutManager
         dashboardAdapter = DashboardAdapter(tasksList)
-        dashboardRecyclerView.adapter = dashboardAdapter
+        dashboardList.adapter = dashboardAdapter
 
         dashboardAdapter.setOnItemClickListener(object : DashboardAdapter.OnItemClickListener{
             override fun onItemClick(position: Int) {
-                Toast.makeText(this@DashboardActivity, "Task ${tasksList.get(position)} clicked", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@DashboardActivity, "Task \"${tasksList[position].taskTodo}\" clicked", Toast.LENGTH_SHORT).show()
             }
         })
     }
