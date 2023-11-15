@@ -1,14 +1,12 @@
-package com.hiq.kidplanning
+package com.hiq.kidplanning.parentDashboard
 
-import android.content.res.Resources
 import android.graphics.Paint
-import android.provider.Settings.Global.getString
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.hiq.kidplanning.R
 
 class DashboardAdapter(
     private val mList: List<DashboardDataModel>

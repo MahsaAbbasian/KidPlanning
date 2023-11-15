@@ -1,4 +1,4 @@
-package com.hiq.kidplanning
+package com.hiq.kidplanning.parentDashboard
 
 data class DashboardDataModel(
     var taskTodo: String,

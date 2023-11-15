@@ -1,10 +1,11 @@
-package com.hiq.kidplanning
+package com.hiq.kidplanning.parentDashboard
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.hiq.kidplanning.R
 
 class DashboardActivity : AppCompatActivity() {
 
@@ -25,7 +26,7 @@ class DashboardActivity : AppCompatActivity() {
         dashboardAdapter = DashboardAdapter(tasksList)
         dashboardList.adapter = dashboardAdapter
 
-        dashboardAdapter.setOnItemClickListener(object : DashboardAdapter.OnItemClickListener{
+        dashboardAdapter.setOnItemClickListener(object : DashboardAdapter.OnItemClickListener {
             override fun onItemClick(position: Int) {
                 Toast.makeText(this@DashboardActivity, "Task \"${tasksList[position].taskTodo}\" clicked", Toast.LENGTH_SHORT).show()
             }
