@@ -2,7 +2,10 @@ package com.hiq.kidplanning.parentDashboard
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
+import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.hiq.kidplanning.R
@@ -16,6 +19,10 @@ class DashboardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
+
+        val toolbar: Toolbar = findViewById(R.id.parent_dashboard_toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.title = null
 
         dashboardList = findViewById(R.id.dashboardRecyclerList)
         tasksList = ArrayList()
@@ -31,6 +38,35 @@ class DashboardActivity : AppCompatActivity() {
                 Toast.makeText(this@DashboardActivity, "Task \"${tasksList[position].taskTodo}\" clicked", Toast.LENGTH_SHORT).show()
             }
         })
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.parent_dashboard_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.menu_settings -> {
+                Toast.makeText(this@DashboardActivity, "Position \"Settings\" clicked", Toast.LENGTH_SHORT).show()
+                return true
+            }
+            R.id.menu_add_kid -> {
+                Toast.makeText(this@DashboardActivity, "Position \"Add Kid\" clicked", Toast.LENGTH_SHORT).show()
+                return true
+            }
+            R.id.menu_logout -> {
+                Toast.makeText(this@DashboardActivity, "Position \"Logout\" clicked", Toast.LENGTH_SHORT).show()
+                return true
+            }
+            R.id.menu_about -> {
+                Toast.makeText(this@DashboardActivity, "Position \"About\" clicked", Toast.LENGTH_SHORT).show()
+                return true
+            }
+            else -> {
+                return super.onOptionsItemSelected(item)
+            }
+        }
     }
 
     private fun addTasks(){

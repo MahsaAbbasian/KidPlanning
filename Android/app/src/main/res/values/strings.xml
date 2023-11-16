@@ -10,4 +10,8 @@
     <string name="comment_generic">Default Comment</string>
     <string name="points">Points: </string>
     <string name="dashboard">Dashboard</string>
+    <string name="add_kid">Add Kid</string>
+    <string name="about">About</string>
+    <string name="logout">Logout</string>
+    <string name="settings">Settings</string>
 </resources>
