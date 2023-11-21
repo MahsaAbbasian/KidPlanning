@@ -1,7 +1,12 @@
 <resources>
-    <string name="app_name">KidPlanning</string>
-    <string name="login_activity_textview_middle">Login Activity</string>
-    <string name="dashboard_activity_name">Dashboard</string>
+    <string name="app_name">Kids Plan Crafts</string>
+    <string name="dashboard_activity_name">Your Dashboard Activity Name</string>
+    <!--string for login button-->
+    <string name="login">Login</string>
+    <!--string for edittext hint in password-->
+    <string name="enter_your_password">Enter password</string>
+    <string name="enter_your_email">Enter your Email</string>
+    <!--string for logout button-->
     <string name="task_clean_room">Cleaning</string>
     <string name="task_shower">Shower</string>
     <string name="task_homework">Homework</string>
