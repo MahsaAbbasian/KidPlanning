@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.hiq.kidplanning.R
 
 class DashboardActivity : AppCompatActivity() {
@@ -15,6 +16,7 @@ class DashboardActivity : AppCompatActivity() {
     private lateinit var dashboardList: RecyclerView
     private lateinit var dashboardAdapter: DashboardAdapter
     private lateinit var tasksList: ArrayList<DashboardDataModel>
+    private lateinit var kidList: ArrayList<DashboardKid>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,20 +24,45 @@ class DashboardActivity : AppCompatActivity() {
 
         val toolbar: Toolbar = findViewById(R.id.parent_dashboard_toolbar)
         setSupportActionBar(toolbar)
-        supportActionBar?.title = null
+        supportActionBar?.title = "Dashboard Parent"
+
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.dashboard_bottom_menu)
+        bottomNavigationView.setOnItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.dashboard_bottom_menu_dashboard-> {
+                    // Dashboard
+                    Toast.makeText(this@DashboardActivity, "Dashboard clicked", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.dashboard_bottom_menu_chores -> {
+                    // Chores
+                    Toast.makeText(this@DashboardActivity, "Chores clicked", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.dashboard_bottom_menu_profile -> {
+                    // Profile
+                    Toast.makeText(this@DashboardActivity, "My Profile clicked", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                else -> false
+            }
+        }
+        bottomNavigationView.inflateMenu(R.menu.dashboard_bottom_navigation_menu)
 
         dashboardList = findViewById(R.id.dashboardRecyclerList)
         tasksList = ArrayList()
         addTasks()
+        kidList = ArrayList()
+        addKids()
 
         val layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
         dashboardList.layoutManager = layoutManager
-        dashboardAdapter = DashboardAdapter(tasksList)
+        dashboardAdapter = DashboardAdapter(kidList)
         dashboardList.adapter = dashboardAdapter
 
         dashboardAdapter.setOnItemClickListener(object : DashboardAdapter.OnItemClickListener {
             override fun onItemClick(position: Int) {
-                Toast.makeText(this@DashboardActivity, "Task \"${tasksList[position].taskTodo}\" clicked", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@DashboardActivity, "Kid \"${kidList[position].name}\" clicked", Toast.LENGTH_SHORT).show()
             }
         })
     }
@@ -80,5 +107,11 @@ class DashboardActivity : AppCompatActivity() {
         tasksList.add(DashboardDataModel("Default Text", "Default Comment", false, 5, 0))
         tasksList.add(DashboardDataModel("Default Text", "Default Comment", false, 5, 0))
         tasksList.add(DashboardDataModel("Default Text", "Default Comment", false, 5, 0))
+    }
+
+    private fun addKids(){
+        kidList.add(DashboardKid("David", 1337, 999, "The person who is writing this bio is actually still a kid."))
+        kidList.add(DashboardKid("Annie", 144, 888, "Annie likes pancakes, broccoli and unicorns."))
+        kidList.add(DashboardKid("Richard", 144, 888, "Richard is young but wants to prove himself."))
     }
 }
