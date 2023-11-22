@@ -23,12 +23,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val button: Button = findViewById(R.id.dashboard_textview_middle)
-        button.setOnClickListener{
-            val changePage = Intent(this, DashboardActivity::class.java)
-            startActivity(changePage)
-        }
-
             // Initializing EditTexts and our Button
             val emailEdt = findViewById<EditText>(R.id.idEdtEmail)
             val passwordEdt = findViewById<EditText>(R.id.idEdtPassword)
