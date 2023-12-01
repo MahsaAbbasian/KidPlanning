@@ -6,6 +6,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -31,17 +32,20 @@ class DashboardActivity : AppCompatActivity() {
             when (menuItem.itemId) {
                 R.id.dashboard_bottom_menu_dashboard-> {
                     // Dashboard
-                    Toast.makeText(this@DashboardActivity, "Dashboard clicked", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this@DashboardActivity, "Dashboard clicked", Toast.LENGTH_SHORT).show()
+                    changeFragment(DashboardFragmentDashboard())
                     true
                 }
                 R.id.dashboard_bottom_menu_chores -> {
                     // Chores
-                    Toast.makeText(this@DashboardActivity, "Chores clicked", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this@DashboardActivity, "Chores clicked", Toast.LENGTH_SHORT).show()
+                    changeFragment(DashboardFragmentChores())
                     true
                 }
                 R.id.dashboard_bottom_menu_profile -> {
                     // Profile
-                    Toast.makeText(this@DashboardActivity, "My Profile clicked", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this@DashboardActivity, "My Profile clicked", Toast.LENGTH_SHORT).show()
+                    changeFragment(DashboardFragmentProfile())
                     true
                 }
                 else -> false
@@ -65,6 +69,13 @@ class DashboardActivity : AppCompatActivity() {
                 Toast.makeText(this@DashboardActivity, "Kid \"${kidList[position].name}\" clicked", Toast.LENGTH_SHORT).show()
             }
         })
+    }
+
+    private fun changeFragment(fragment:Fragment){
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.dashboardFragmentContainer, fragment)
+            .addToBackStack(null)
+            .commit()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
