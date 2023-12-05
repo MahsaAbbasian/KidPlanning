@@ -15,4 +15,15 @@
     <string name="comment_generic">Default Comment</string>
     <string name="points">Points: </string>
     <string name="dashboard">Dashboard</string>
+    <string name="add_kid">Add Kid</string>
+    <string name="about">About</string>
+    <string name="logout">Logout</string>
+    <string name="settings">Settings</string>
+    <string name="percentage45">45%</string>
+    <string name="percentage64">64%</string>
+    <string name="kid_name">Kid Name</string>
+    <string name="hello_parent">Hello Parent Name</string>
+    <string name="welcome">Welcome</string>
+    <string name="chores_planning">Chores planning</string>
+    <string name="my_profile">My Profile</string>
 </resources>
