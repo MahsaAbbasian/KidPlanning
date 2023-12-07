@@ -42,7 +42,10 @@ class MainActivity : AppCompatActivity() {
 
             // Set up click listener for login button
             loginBtn.setOnClickListener {
-                if (TextUtils.isEmpty(emailEdt.text.toString()) && TextUtils.isEmpty(passwordEdt.text.toString())) {
+                val i = Intent(this@MainActivity, DashboardActivity::class.java)
+                startActivity(i)
+                finish()
+                /*if (TextUtils.isEmpty(emailEdt.text.toString()) && TextUtils.isEmpty(passwordEdt.text.toString())) {
                     // this method will call when email and password fields are empty.
                     Toast.makeText(this@MainActivity, "Please Enter Email and Password", Toast.LENGTH_SHORT).show()
                 } else {
@@ -53,7 +56,7 @@ class MainActivity : AppCompatActivity() {
                     val i = Intent(this@MainActivity, DashboardActivity::class.java)
                     startActivity(i)
                     finish()
-                }
+                }*/
             }
         }
     private fun saveCredentials(email: String, password: String){

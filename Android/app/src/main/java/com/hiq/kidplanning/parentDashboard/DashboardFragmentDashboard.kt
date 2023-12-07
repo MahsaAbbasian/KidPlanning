@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -36,8 +38,27 @@ class DashboardFragmentDashboard : Fragment() {
         dashboardList.adapter = dashboardAdapter
 
         dashboardAdapter.setOnItemClickListener(object : DashboardAdapter.OnItemClickListener {
-            override fun onItemClick(position: Int) {
-                Toast.makeText(requireContext(), "Kid \"${kidList[position].name}\" clicked", Toast.LENGTH_SHORT).show()
+            override fun onItemClick(view: View, position: Int) {
+                //Toast.makeText(requireContext(), "Kid \"${kidList[position].name}\" clicked", Toast.LENGTH_SHORT).show()
+                //dashboardAdapter.resetLastClickedSize()
+                val topButton: Button? = view.findViewById(R.id.dashboard_kid_vc_top_button)
+                val bottomButton: Button? = view.findViewById(R.id.dashboard_kid_vc_bottom_button)
+                val kidHiddenName: TextView? = view.findViewById(R.id.dashboard_kid_hidden_name)
+                val kidPercentage: TextView? = view.findViewById(R.id.dashboard_kid_vc_percentage)
+                val kidName: TextView? = view.findViewById(R.id.dashboard_kid_name)
+                if (topButton != null && bottomButton != null && kidHiddenName != null && kidPercentage != null && kidName != null && topButton.visibility == View.VISIBLE) {
+                    topButton.visibility = View.GONE
+                    bottomButton.visibility = View.GONE
+                    kidHiddenName.visibility = View.GONE
+                    kidPercentage.visibility = View.VISIBLE
+                    kidName.visibility = View.VISIBLE
+                }else if(topButton != null && bottomButton != null && kidHiddenName != null && kidPercentage != null && kidName != null && topButton.visibility == View.GONE){
+                    topButton.visibility = View.VISIBLE
+                    bottomButton.visibility = View.VISIBLE
+                    kidHiddenName.visibility = View.VISIBLE
+                    kidPercentage.visibility = View.GONE
+                    kidName.visibility = View.GONE
+                }
             }
         })
     }

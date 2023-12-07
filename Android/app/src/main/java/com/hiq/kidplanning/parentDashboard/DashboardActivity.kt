@@ -56,19 +56,6 @@ class DashboardActivity : AppCompatActivity() {
         dashboardList = findViewById(R.id.dashboardRecyclerList)
         tasksList = ArrayList()
         addTasks()
-        kidList = ArrayList()
-        addKids()
-
-        val layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
-        dashboardList.layoutManager = layoutManager
-        dashboardAdapter = DashboardAdapter(kidList)
-        dashboardList.adapter = dashboardAdapter
-
-        dashboardAdapter.setOnItemClickListener(object : DashboardAdapter.OnItemClickListener {
-            override fun onItemClick(position: Int) {
-                Toast.makeText(this@DashboardActivity, "Kid \"${kidList[position].name}\" clicked", Toast.LENGTH_SHORT).show()
-            }
-        })
     }
 
     private fun changeFragment(fragment:Fragment){
@@ -118,11 +105,5 @@ class DashboardActivity : AppCompatActivity() {
         tasksList.add(DashboardDataModel("Default Text", "Default Comment", false, 5, 0))
         tasksList.add(DashboardDataModel("Default Text", "Default Comment", false, 5, 0))
         tasksList.add(DashboardDataModel("Default Text", "Default Comment", false, 5, 0))
-    }
-
-    private fun addKids(){
-        kidList.add(DashboardKid("David", 1337, 999, "The person who is writing this bio is actually still a kid."))
-        kidList.add(DashboardKid("Annie", 144, 888, "Annie likes pancakes, broccoli and unicorns."))
-        kidList.add(DashboardKid("Richard", 144, 888, "Richard is young but wants to prove himself."))
     }
 }

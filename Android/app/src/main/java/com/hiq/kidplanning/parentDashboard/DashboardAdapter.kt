@@ -27,8 +27,14 @@ class DashboardAdapter(
         val dashboardKid = mList[position]
 
         holder.kidName.text = dashboardKid.name
+        holder.kidHiddenName.text = dashboardKid.name
         if(dashboardKid.name == "Annie"){
             holder.kidPercentage.text = holder.itemView.context.getString(R.string.percentage64)
+        }
+
+        holder.itemView.setOnClickListener {
+            // Kalla på onItemClick-metoden i lyssnaren
+            mListener?.onItemClick(it, position)
         }
         /*
         if(dashboardDataModel.pictureID != 0){
@@ -45,6 +51,15 @@ class DashboardAdapter(
         //holder.points.text = holder.itemView.context.getString(R.string.percentage64)
     }
 
+    private var lastClickedPosition: Int = RecyclerView.NO_POSITION
+
+    fun resetLastClickedSize() {
+        if (lastClickedPosition != RecyclerView.NO_POSITION) {
+            notifyItemChanged(lastClickedPosition)
+            lastClickedPosition = RecyclerView.NO_POSITION
+        }
+    }
+
     override fun getItemCount(): Int {
         return mList.size
     }
@@ -52,7 +67,7 @@ class DashboardAdapter(
     private lateinit var mListener: OnItemClickListener
 
     interface OnItemClickListener{
-        fun onItemClick(position : Int)
+        fun onItemClick(view: View, position: Int)
     }
 
     fun setOnItemClickListener(listener : OnItemClickListener){
@@ -65,11 +80,12 @@ class DashboardAdapter(
         val points: TextView = itemView.findViewById(R.id.recycler_cardview_points_value)*/
 
         val kidName: TextView = itemView.findViewById(R.id.dashboard_kid_name)
+        val kidHiddenName: TextView = itemView.findViewById(R.id.dashboard_kid_hidden_name)
         val kidPercentage: TextView = itemView.findViewById(R.id.dashboard_kid_vc_percentage)
 
         init {
             itemView.setOnClickListener {
-                listener.onItemClick(adapterPosition)
+                listener.onItemClick(it, adapterPosition)
             }
         }
     }
