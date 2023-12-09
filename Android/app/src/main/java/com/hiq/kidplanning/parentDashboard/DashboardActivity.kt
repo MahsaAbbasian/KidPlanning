@@ -14,11 +14,6 @@ import com.hiq.kidplanning.R
 
 class DashboardActivity : AppCompatActivity() {
 
-    private lateinit var dashboardList: RecyclerView
-    private lateinit var dashboardAdapter: DashboardAdapter
-    private lateinit var tasksList: ArrayList<DashboardDataModel>
-    private lateinit var kidList: ArrayList<DashboardKid>
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
@@ -52,10 +47,6 @@ class DashboardActivity : AppCompatActivity() {
             }
         }
         bottomNavigationView.inflateMenu(R.menu.dashboard_bottom_navigation_menu)
-
-        dashboardList = findViewById(R.id.dashboardRecyclerList)
-        tasksList = ArrayList()
-        addTasks()
     }
 
     private fun changeFragment(fragment:Fragment){
@@ -92,18 +83,5 @@ class DashboardActivity : AppCompatActivity() {
                 return super.onOptionsItemSelected(item)
             }
         }
-    }
-
-    private fun addTasks(){
-        tasksList.add(DashboardDataModel("Homework", "Finish your homework", false, 10, 1))
-        tasksList.add(DashboardDataModel("Cleaning", "Clean your room", false, 20, 2))
-        tasksList.add(DashboardDataModel("Bed", "Make your bed", true, 5, 3))
-        tasksList.add(DashboardDataModel("Teeth", "Brush your teeth", false, 5, 4))
-        tasksList.add(DashboardDataModel("Default Text", "Default Comment", false, 5, 0))
-        tasksList.add(DashboardDataModel("Default Text", "Default Comment", true, 5, 0))
-        tasksList.add(DashboardDataModel("Default Text", "Default Comment", false, 5, 0))
-        tasksList.add(DashboardDataModel("Default Text", "Default Comment", false, 5, 0))
-        tasksList.add(DashboardDataModel("Default Text", "Default Comment", false, 5, 0))
-        tasksList.add(DashboardDataModel("Default Text", "Default Comment", false, 5, 0))
     }
 }
