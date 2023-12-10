@@ -49,7 +49,7 @@ class DashboardActivity : AppCompatActivity() {
         bottomNavigationView.inflateMenu(R.menu.dashboard_bottom_navigation_menu)
     }
 
-    private fun changeFragment(fragment:Fragment){
+    fun changeFragment(fragment:Fragment){
         supportFragmentManager.beginTransaction()
             .replace(R.id.dashboardFragmentContainer, fragment)
             .addToBackStack(null)

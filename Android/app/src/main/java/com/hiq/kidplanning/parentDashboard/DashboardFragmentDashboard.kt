@@ -41,23 +41,37 @@ class DashboardFragmentDashboard : Fragment() {
             override fun onItemClick(view: View, position: Int) {
                 //Toast.makeText(requireContext(), "Kid \"${kidList[position].name}\" clicked", Toast.LENGTH_SHORT).show()
                 //dashboardAdapter.resetLastClickedSize()
-                val topButton: Button? = view.findViewById(R.id.dashboard_kid_vc_top_button)
+                val choresButton: Button? = view.findViewById(R.id.dashboard_kid_vc_top_button)
                 val bottomButton: Button? = view.findViewById(R.id.dashboard_kid_vc_bottom_button)
                 val kidHiddenName: TextView? = view.findViewById(R.id.dashboard_kid_hidden_name)
                 val kidPercentage: TextView? = view.findViewById(R.id.dashboard_kid_vc_percentage)
-                val kidName: TextView? = view.findViewById(R.id.dashboard_kid_name)
-                if (topButton != null && bottomButton != null && kidHiddenName != null && kidPercentage != null && kidName != null && topButton.visibility == View.VISIBLE) {
-                    topButton.visibility = View.GONE
+                val kidNameTextView: TextView? = view.findViewById(R.id.dashboard_kid_name)
+                var kidName: String = "invalid";
+                if (choresButton != null && bottomButton != null && kidHiddenName != null && kidPercentage != null && kidNameTextView != null && choresButton.visibility == View.VISIBLE) {
+                    choresButton.visibility = View.GONE
                     bottomButton.visibility = View.GONE
                     kidHiddenName.visibility = View.GONE
                     kidPercentage.visibility = View.VISIBLE
-                    kidName.visibility = View.VISIBLE
-                }else if(topButton != null && bottomButton != null && kidHiddenName != null && kidPercentage != null && kidName != null && topButton.visibility == View.GONE){
-                    topButton.visibility = View.VISIBLE
+                    kidNameTextView.visibility = View.VISIBLE
+
+                    kidName = "invalid"
+                }else if(choresButton != null && bottomButton != null && kidHiddenName != null && kidPercentage != null && kidNameTextView != null && choresButton.visibility == View.GONE){
+                    choresButton.visibility = View.VISIBLE
                     bottomButton.visibility = View.VISIBLE
                     kidHiddenName.visibility = View.VISIBLE
                     kidPercentage.visibility = View.GONE
-                    kidName.visibility = View.GONE
+                    kidNameTextView.visibility = View.GONE
+
+                    kidName = kidList[position].name
+                }
+
+                choresButton?.setOnClickListener{
+                    if(kidName != "invalid"){
+                        val dashboardFragmentKidChores = DashboardFragmentKidChores.newInstance(kidName)
+                        (activity as DashboardActivity).changeFragment(dashboardFragmentKidChores)
+                    }else{
+                        Toast.makeText(requireContext(), "No individual were chosen", Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
         })
