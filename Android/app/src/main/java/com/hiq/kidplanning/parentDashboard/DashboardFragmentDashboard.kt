@@ -78,8 +78,8 @@ class DashboardFragmentDashboard : Fragment() {
     }
 
     private fun addKids(){
-        kidList.add(DashboardKid("David", 1337, 999, "The person who is writing this bio is actually still a kid."))
-        kidList.add(DashboardKid("Annie", 144, 888, "Annie likes pancakes, broccoli and unicorns."))
-        kidList.add(DashboardKid("Richard", 144, 888, "Richard is young but wants to prove himself."))
+        kidList.add(DashboardKid("David", 1337, 999, "The person who is writing this bio is actually still a kid.", 1))
+        kidList.add(DashboardKid("Annie Bergenstrale", 144, 888, "Annie likes pancakes, broccoli and unicorns.", 2))
+        kidList.add(DashboardKid("Christopher Lee", 144, 888, "Christopher is young but wants to prove himself.", 3))
     }
 }
