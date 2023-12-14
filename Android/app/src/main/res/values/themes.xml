@@ -3,7 +3,22 @@
     <style name="Base.Theme.KidPlanning" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">#2C17A5</item>
+        <item name="colorPrimaryDark">#3C81CC</item>
+        <item name="colorAccent">#FFFFFF</item>
+
+        <!-- <item name="colorButtonNormal">#2C17A5</item> -->
     </style>
+    <!--
+    <style name="buttonStyle" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#2C17A5</item>
+        <item name="colorPrimaryDark">#3C81CC</item>
+        <item name="colorAccent">#FFFFFF</item>
+
+        <item name="android:background">#2C17A5</item>
+
+        <item name="colorButtonNormal">#2C17A5</item>
+    </style> -->
 
     <style name="Theme.KidPlanning" parent="Base.Theme.KidPlanning" />
 </resources>

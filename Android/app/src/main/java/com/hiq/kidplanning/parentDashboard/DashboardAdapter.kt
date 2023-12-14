@@ -5,6 +5,7 @@ import android.graphics.drawable.GradientDrawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
@@ -44,6 +45,11 @@ class DashboardAdapter(
 
         holder.layout.background = colorChoice(dashboardKid.colorChoice)
 
+        if(dashboardKid.name == "Annie Bergenstrale"){
+            holder.iconImage.setImageResource(android.R.drawable.ic_menu_myplaces)
+        }else if(dashboardKid.name == "Christopher Lee"){
+            holder.iconImage.setImageResource(android.R.drawable.btn_star_big_on)
+        }
         /*
         if(dashboardDataModel.pictureID != 0){
             holder.task.text = dashboardDataModel.taskTodo
@@ -90,8 +96,8 @@ class DashboardAdapter(
 
     private fun firstName(name: String): String {
         val firstNameString = StringBuilder(name.trim().split(" ")[0])
-        if(firstNameString.length > 10){
-            firstNameString.setLength(9)
+        if(firstNameString.length > 11){
+            firstNameString.setLength(10)
             firstNameString.append(".")
         }
         return firstNameString.toString()
@@ -130,6 +136,8 @@ class DashboardAdapter(
         val kidName: TextView = itemView.findViewById(R.id.dashboard_kid_name)
         val kidHiddenName: TextView = itemView.findViewById(R.id.dashboard_kid_hidden_name)
         val kidPercentage: TextView = itemView.findViewById(R.id.dashboard_kid_vc_percentage)
+
+        val iconImage: ImageView = itemView.findViewById(R.id.dashboard_vc_kid_picture)
 
         init {
             itemView.setOnClickListener {

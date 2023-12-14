@@ -39,6 +39,8 @@
 
     <Button
         android:id="@+id/dashboard_fragment_dashboard_add_kid_button"
+        style="@style/Widget.AppCompat.Button"
+        android:background="@drawable/rounded_corner_button_shape"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

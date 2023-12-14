@@ -47,6 +47,7 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -82,5 +83,6 @@
         app:layout_constraintBottom_toTopOf="@+id/dashboard_bottom_menu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/parent_dashboard_toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/parent_dashboard_toolbar"
+        tools:layout="@layout/fragment_dashboard" />
 </androidx.constraintlayout.widget.ConstraintLayout>
