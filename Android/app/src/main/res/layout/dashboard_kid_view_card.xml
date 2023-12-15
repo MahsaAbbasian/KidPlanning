@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dashboard_kid_hidden_name"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -66,13 +66,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:text="@string/chores"
             android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dashboard_kid_hidden_name" />
+            app:layout_constraintTop_toBottomOf="@+id/dashboard_vc_kid_picture" />
 
         <Button
             android:id="@+id/dashboard_kid_vc_bottom_button"
@@ -93,14 +93,14 @@
             android:id="@+id/dashboard_kid_hidden_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:text="@string/kid_name"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:visibility="gone"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dashboard_kid_picture" />
+            android:visibility="invisible"
+            app:layout_constraintStart_toEndOf="@+id/dashboard_vc_kid_picture"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/dashboard_vc_kid_picture"

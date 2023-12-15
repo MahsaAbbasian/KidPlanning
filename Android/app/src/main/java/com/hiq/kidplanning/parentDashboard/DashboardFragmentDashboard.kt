@@ -50,7 +50,7 @@ class DashboardFragmentDashboard : Fragment() {
                 if (choresButton != null && bottomButton != null && kidHiddenName != null && kidPercentage != null && kidNameTextView != null && choresButton.visibility == View.VISIBLE) {
                     choresButton.visibility = View.GONE
                     bottomButton.visibility = View.GONE
-                    kidHiddenName.visibility = View.GONE
+                    kidHiddenName.visibility = View.INVISIBLE
                     kidPercentage.visibility = View.VISIBLE
                     kidNameTextView.visibility = View.VISIBLE
 

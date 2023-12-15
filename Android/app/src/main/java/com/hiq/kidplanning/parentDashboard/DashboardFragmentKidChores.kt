@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -48,9 +49,16 @@ class DashboardFragmentKidChores : Fragment() {
         listOfChores = ArrayList()
         addChores()
 
+        val kidPicture: ImageView = view.findViewById(R.id.dashboard_fragment_kid_chores_pv_pic)
         val kidName: TextView? = view.findViewById(R.id.dashboard_fragment_kid_chores_pv_kid_name)
+
         if (kidName != null) {
             kidName.text = dataImport
+        }
+        if(dataImport == "Annie Bergenstrale"){
+            kidPicture.setImageResource(android.R.drawable.ic_menu_myplaces)
+        }else if(dataImport == "Christopher Lee"){
+            kidPicture.setImageResource(android.R.drawable.btn_star_big_on)
         }
 
         val choreRecycleList: RecyclerView = requireView().findViewById(R.id.dashboard_fragment_kid_chores_pv_list)
@@ -74,7 +82,7 @@ class DashboardFragmentKidChores : Fragment() {
         listOfChores.add(Chore(task ="Finish Homework", pictureID = 11, points = 12))
         listOfChores.add(Chore(task = "Set table", pictureID = 13, points = 14))
         listOfChores.add(Chore(task = "Empty Dishwasher", pictureID = 15, points = 16))
-        listOfChores.add(Chore(task = "Put away Toys", pictureID = 17, points = 18, complete = true))
+        listOfChores.add(Chore(task = "Fix Car", description = "Change the spark plugs on daddy's car", pictureID = 17, points = 18, complete = true))
         listOfChores.add(Chore(task = "Hamper", description = "Put dirty clothes into the hamper", pictureID = 19, points = 20))
         listOfChores.add(Chore(task = "The Sink", description = "The the dirty dishes into the sink", pictureID = 21, points = 22))
         listOfChores.add(Chore(task = "Add your own?"))
