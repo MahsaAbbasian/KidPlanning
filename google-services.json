@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "475003133419",
+    "project_id": "plan-craft-kids",
+    "storage_bucket": "plan-craft-kids.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475003133419:android:b63490c58b10591db84dae",
+        "android_client_info": {
+          "package_name": "com.hiq.kidplanning"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3F02FQvhZ_hj_S0fZr-kwhSNCpb1Ei3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

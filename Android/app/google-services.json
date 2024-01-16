@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "667846473535",
+    "project_id": "kidplanning-cb590",
+    "storage_bucket": "kidplanning-cb590.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667846473535:android:f0fd9693234830a4de058a",
+        "android_client_info": {
+          "package_name": "com.hiq.kidplanning"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxBenB7R6nDfwDlWp4NXQjThHdk12xjIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

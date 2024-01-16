@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.MainActivity">
+
+    <!--textView regarding create account-->
+
+    <!--Label Email above email box-->
+
+    <TextView
+        android:id="@+id/createAccountText"
+        android:layout_width="266dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginBottom="28dp"
+        android:shadowColor="#673AB7"
+        android:text="@string/Create_your_account"
+        android:textColor="#673AB7"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/emailLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.254"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/emailLabel"
+        android:layout_width="149dp"
+        android:layout_height="32dp"
+        android:text="@string/Label_email"
+        app:layout_constraintBottom_toTopOf="@+id/idEdtEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/idEdtEmail"
+        android:layout_width="347dp"
+        android:layout_height="56dp"
+        android:hint="@string/enter_your_email_for_register"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        android:backgroundTint="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.472" />
+
+    <!--Label above password box-->
+
+    <TextView
+        android:id="@+id/label_password"
+        android:layout_width="149dp"
+        android:layout_height="32dp"
+        android:text="@string/Label_password"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.567" />
+
+    <EditText
+        android:id="@+id/idEdtPassword"
+        android:layout_width="348dp"
+        android:layout_height="54dp"
+        android:hint="@string/enter_your_password_for_register"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.634" />
+
+
+
+
+    <!-- TextView for "Accept terms and conditions" with underline -->
+    <TextView
+        android:id="@+id/termsAndCondition"
+        android:layout_width="346dp"
+        android:layout_height="47dp"
+        android:text="@string/terms_conditions"
+        android:textColorHighlight="#673AB7"
+        app:layout_constraintBottom_toTopOf="@+id/idBtnRegister"
+        app:layout_constraintEnd_toEndOf="@+id/idEdtPassword"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/idBtnRegister"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtPassword"
+        app:layout_constraintVertical_bias="0.481" />
+
+
+    <!-- Button to continue to register-->
+    <Button
+        android:id="@+id/idBtnRegister"
+        android:layout_width="347dp"
+        android:layout_height="56dp"
+        android:layout_below="@id/idEdtPassword"
+        android:layout_marginBottom="108dp"
+        android:text="@string/Register"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtPassword"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/idAlHaeAccount"
+        android:layout_width="347dp"
+        android:layout_height="56dp"
+        android:layout_below="@id/idBtnRegister"
+        android:text="@string/already_have_account"
+        android:enabled="false"
+        android:textColor="#A9A6A9"
+        app:layout_constraintStart_toEndOf="@id/idBtnRegister"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.549" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

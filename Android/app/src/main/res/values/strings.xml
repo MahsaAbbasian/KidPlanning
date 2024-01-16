@@ -1,11 +1,35 @@
 <resources>
     <string name="app_name">Kids Plan Crafts</string>
     <string name="dashboard_activity_name">Your Dashboard Activity Name</string>
+
+    <!--code related to Register-->
+
+    <!--Text regarding create account-->
+    <string name="Create_your_account">Create your account</string>
+    <!--Label password-->
+    <string name="Label_email">E-mail</string>
+    <!--string for edittext hint in register Email-->
+    <string name="enter_your_email_for_register">Enter your Email</string>
+    <!--string for edittext hint in register password-->
+    <string name="enter_your_password_for_register">Enter password</string>
+    <!--Label password-->
+    <string name="Label_password">Password</string>
+    <!--Text regarding terms and conditions-->
+    <string name="terms_conditions">By creating your <u>Accept terms and conditions</u> or other small letter text we need to keep here.</string>
+    <!--string for register button-->
+    <string name="Register">Register</string>
+    <!--already have an account             <font color="@color/purple"><u>Log in</u></font> -->
+    <string name="already_have_account">Already have an account?</string>
+
+
+    <!--code related to login-->
+    <!--string for edittext hint in login password-->
+    <string name="enter_your_password_for_login">Enter password</string>
+    <!--string for edittext hint in login Email-->
+    <string name="enter_your_email_for_login">Enter your Email</string>
     <!--string for login button-->
     <string name="login">Login</string>
-    <!--string for edittext hint in password-->
-    <string name="enter_your_password">Enter password</string>
-    <string name="enter_your_email">Enter your Email</string>
+
     <!--string for logout button-->
     <string name="task_clean_room">Cleaning</string>
     <string name="task_shower">Shower</string>
@@ -26,4 +50,5 @@
     <string name="welcome">Welcome</string>
     <string name="chores_planning">Chores planning</string>
     <string name="my_profile">My Profile</string>
+
 </resources>
