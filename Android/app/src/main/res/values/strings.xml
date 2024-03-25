@@ -28,5 +28,6 @@
     <string name="welcome">Welcome</string>
     <string name="chores_planning">Chores planning</string>
     <string name="my_profile">My Profile</string>
+    <string name="fake_email">name.lastname@kidplanning.com</string>
     <string name="hello_kids">Hello Kids!</string>
 </resources>
