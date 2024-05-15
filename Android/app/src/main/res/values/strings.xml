@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Kids Plan Crafts</string>
+    <string name="dashboard_activity_name">Your Dashboard Activity Name</string>
+    <!--string for login button-->
+    <string name="login">Login</string>
+    <!--string for edittext hint in password-->
+    <string name="enter_your_password">Enter password</string>
+    <string name="enter_your_email">Enter your Email</string>
+    <!--string for logout button-->
+    <string name="task_clean_room">Cleaning</string>
+    <string name="task_shower">Shower</string>
+    <string name="task_homework">Homework</string>
+    <string name="task_playtime">Playtime</string>
+    <string name="task_generic">Default\nTask</string>
+    <string name="comment_generic">Default Comment</string>
+    <string name="points">Points: </string>
+    <string name="dashboard">Dashboard</string>
+    <string name="add_kid">Add Kid</string>
+    <string name="about">About</string>
+    <string name="logout">Logout</string>
+    <string name="settings">Settings</string>
+    <string name="percentage45">45%</string>
+    <string name="percentage64">64%</string>
+    <string name="kid_name">Kid Name</string>
+    <string name="hello_parent">Hello Parent Name</string>
+    <string name="welcome">Welcome</string>
+    <string name="chores_planning">Chores planning</string>
+    <string name="my_profile">My Profile</string>
+</resources>

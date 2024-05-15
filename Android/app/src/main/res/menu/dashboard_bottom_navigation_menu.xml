@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboard_bottom_menu_dashboard"
+        android:icon="@android:drawable/ic_input_get"
+        android:title="@string/dashboard" />
+    <item
+        android:id="@+id/dashboard_bottom_menu_chores"
+        android:icon="@android:drawable/ic_dialog_dialer"
+        android:title="@string/chores_planning" />
+    <item
+        android:id="@+id/dashboard_bottom_menu_profile"
+        android:icon="@android:drawable/ic_menu_my_calendar"
+        android:title="@string/my_profile" />
+
+</menu>

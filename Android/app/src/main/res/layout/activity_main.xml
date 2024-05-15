@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- EditText for getting user email address -->
+    <!-- input type is set to email -->
+
+    <!-- EditText for getting user password -->
+    <!-- input type is set to password -->
+
+    <!-- Button to continue to login -->
+    <EditText
+        android:id="@+id/idEdtEmail"
+        android:layout_width="347dp"
+        android:layout_height="56dp"
+        android:hint="@string/enter_your_email"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.465" />
+
+    <EditText
+        android:id="@+id/idEdtPassword"
+        android:layout_width="347dp"
+        android:layout_height="56dp"
+        android:hint="@string/enter_your_password"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.634" />
+
+    <TextView
+        android:id="@+id/main_activity_textview_top"
+        android:layout_width="140dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- TextView at the top -->
+    <Button
+        android:id="@+id/idBtnLogin"
+        android:layout_width="270dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/idEdtPassword"
+        android:text="@string/login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtEmail"
+        app:layout_constraintVertical_bias="0.549" />
+</androidx.constraintlayout.widget.ConstraintLayout>
